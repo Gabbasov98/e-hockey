@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 <!--    <script src="/js/bootstrap.js"></script>-->
     <style>/*!
  * Cropper.js v1.5.12
@@ -914,14 +914,18 @@
                 <div class="match-filter">
                     <h2 class="match-filter__title display40 bold-text">Матч - центр</h2>
                     <select class="match-filter__select form-select form-control-dark w-auto">
-                        <option value="all" selected>Регулярный чемпионат</option>
+                        <option value="all" selected>Команда 1</option>
+                        <option value="playoff">Команда2</option>
+                        <option value="playoff">Команда3</option>
+                    </select>
+                    <select class="match-filter__select form-select form-control-dark w-auto">
+                        <option value="all" selected>Все матчи</option>
                         <option value="playoff">Плей-офф</option>
                         <option value="regular">Регулярный чемпионат</option>
                     </select>
                     <select class="match-filter__select form-select form-control-dark w-auto">
-                        <option value="all" selected>Сортировать по команде</option>
-                        <option value="playoff">Плей-офф</option>
-                        <option value="regular">Регулярный чемпионат</option>
+                        <option value="all" selected>RHL </option>
+                        <option value="playoff">Кубок России</option>
                     </select>
                 </div>
 
@@ -1182,90 +1186,515 @@
     </div>
 </div>
 
+                    <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__top">
+            <div class="match-result__add-time display25 red-text bold-text">
+                ОТ
+            </div>
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                22:00 МСК
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__top">
+            
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                22:00 МСК
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__top">
+            
+            <div class="match-result__score display90 bold-text">
+                22 : 30
+            </div>
+        </div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                четверг
+            </div>
+            <div class="match-result__date display20 bold-text">
+                24.11.2022
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__top">
+            <div class="match-result__add-time display25 red-text bold-text">
+                ОТ
+            </div>
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                22:00 МСК
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__top">
+            
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                22:00 МСК
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__top">
+            
+            <div class="match-result__score display90 bold-text">
+                22 : 30
+            </div>
+        </div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                четверг
+            </div>
+            <div class="match-result__date display20 bold-text">
+                24.11.2022
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
                 </div>
 
-                <div class="broadcast m-slider">
-    <div class="broadcast__top m-slider__top">
-        <h2 class="broadcast__title display40">Прошедшие трансляции</h2>
-        <div class="m-slider__nav">
-            <div class="swiper-button swiper-button-prev"></div>
-            <div class="swiper-button swiper-button-next"></div>
-        </div>
-    </div>
-    <div class="broadcast__slider swiper-container">
-        <div class="swiper-wrapper">
-            <a href="" class="broadcast-card swiper-slide">
-    <div class="broadcast-card__img">
-        <img src="images/broadcast.jpg" alt="">
-    </div>
-    <div class="broadcast-card__content">
-        <h3 class="broadcast-card__title display20 bold-text">Severstal x Virtuoso</h3>
-        <p class="broadcast-card__date display16 light-text">25.06.2022</p>
-    </div>
-</a>
-
-            <a href="" class="broadcast-card swiper-slide">
-    <div class="broadcast-card__img">
-        <img src="images/broadcast2.jpg" alt="">
-    </div>
-    <div class="broadcast-card__content">
-        <h3 class="broadcast-card__title display20 bold-text">Severstal x Virtuoso</h3>
-        <p class="broadcast-card__date display16 light-text">25.06.2022</p>
-    </div>
-</a>
-
-            <a href="" class="broadcast-card swiper-slide">
-    <div class="broadcast-card__img">
-        <img src="images/broadcast2.jpg" alt="">
-    </div>
-    <div class="broadcast-card__content">
-        <h3 class="broadcast-card__title display20 bold-text">Severstal x Virtuoso</h3>
-        <p class="broadcast-card__date display16 light-text">25.06.2022</p>
-    </div>
-</a>
-
-        </div>
-    </div>
-</div>
-
-
-                <div class="podcast">
-    <div class="podcast__top">
-        <h2 class="podcast__title display50 bold-text">слушайте</h2>
-        <div class="podcast__items">
-            <a href="" class="podcast__item">
-                <img src="images/podcast-vk.png" alt="">
-            </a>
-            <a href="" class="podcast__item">
-                <img src="images/podcast-ya.png" alt="">
-            </a>
-            <a href="" class="podcast__item">
-                <img src="images/podcast-spotify.png" alt="">
-            </a>
-        </div>
-    </div>
-    <h3 class="podcast__subtitle display40">skill stick podcast</h3>
-    <img src="images/podcast.png" alt="" class="podcast__img">
-</div>
-
-
-                <div class="follow">
-    <h2 class="follow__title display50 bold-text">следите за нами</h2>
-    <div class="follow__items">
-        <a href="" class="follow__item">
-            <img src="images/youtube.png" alt="">
-        </a>
-        <a href="" class="follow__item">
-            <img src="images/twitch.png" alt="">
-        </a>
-        <a href="" class="follow__item">
-            <img src="images/vk.png" alt="">
-        </a>
-        <a href="" class="follow__item">
-            <img src="images/telegram.png" alt="">
-        </a>
-    </div>
-</div>
+                <div class="detail-stat__nav">
+                    <button class="detail-stat__btn btn btn-outline-gray">
+                        Ещё матчи
+                    </button>
+                </div>
 
 
 
