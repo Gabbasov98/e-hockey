@@ -646,6 +646,17 @@ $(document).ready(() => {
         },
         observer: true,
         observeParents: true,
+        breakpoints: {
+            320: {
+                spaceBetween: 15,
+                slidesPerView: 3,
+                variableWidth: false,
+            },
+            576: {
+                variableWidth: true,
+                slidesPerView: "auto",
+            }
+        }
     });
 
     $(document).on("click", ".navbar-toggler", function(){
