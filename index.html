@@ -2275,12 +2275,13 @@
             video.addEventListener('click', function () {
                 video.play();
             }, false);
+            video.playbackRate = 1.5;
             video.click();
             video.play();
 
             setTimeout(() => {
                 $(".loader").addClass("_hide")
-            },4000)
+            }, 3000)
         })
     </script>
     <script src="js/libs.min.js"></script>
