@@ -2582,133 +2582,8 @@
     </td>
 </tr>
 
-
-        <tr class="display18 gray-text light-text">
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th>
-                <div title="Матчей" class="league-table__head-desc display20 bold-text">
-                    GP
-                </div>
-            </th>
-            <th>
-                <div title="Победы" class="league-table__head-desc display20 bold-text">
-                    W
-                </div>
-            </th>
-            <th>
-                <div title="Поражения" class="league-table__head-desc display20 bold-text">
-                    L
-                </div>
-            </th>
-            <th>
-                <div title="Процент спасений" class="league-table__head-desc display20 bold-text">
-                    SV%
-                </div>
-            </th>
-            <th>
-                <div title="Поражения в овертайме" class="league-table__head-desc display20 bold-text">
-                    OTL
-                </div>
-            </th>
-            <th>
-                <div title="Спасения" class="league-table__head-desc display20 bold-text">
-                    Svs
-                </div>
-            </th>
-            <th>
-                <div title="Пропущено голов" class="league-table__head-desc display20 bold-text">
-                    GA
-                </div>
-            </th>
-            <th>
-                <div title="Пропущено голов за игру в среднем" class="league-table__head-desc display20 bold-text">
-                    GAA
-                </div>
-            </th>
-            <th>
-                <div title="Матчи на ноль" class="league-table__head-desc display20 bold-text">
-                    SO
-                </div>
-            </th>
-        </tr>
-        <tr class="stat-row stat-row2">
-    <td>
-        <span class="display18 gray-text light-text">
-            6
-        </span>
-    </td>
-    <td>
-        <span class="stat-row__ordinal display25 bold-text">25</span>
-    </td>
-    <td>
-        <div class="player-info">
-            <div class="player-info__images">
-                <img src="images/player.png" alt="" class="player-info__img">
-                <img src="images/rus.svg" alt="" class="player-info__flag">
-            </div>
-            <div class="player-info__content">
-                <div class="player-info__level display25 bold-text">SIMPLE</div>
-                <div class="player-info__name display12 medium-text gray-text">Vladislav Gavrikov</div>
-                <div class="player-info__team display12 bold-text red-text">EHC TATNEFT AK BARS</div>
-            </div>
-        </div>
-    </td>
-    <td>
-        <div class="player-info__assist">
-            <img src="images/lw.png" alt="">
-        </div>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0%
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-    <td>
-        <span class="display25 bold-text">
-            0
-        </span>
-    </td>
-</tr>
-
     </table>
+    <ul class="pagination"><li class="paginate_button page-item previous disabled" id="teams_previous"><a href="#" aria-controls="teams" data-dt-idx="0" tabindex="0" class="page-link">Предыдущая</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="teams" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="teams" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="teams_next"><a href="#" aria-controls="teams" data-dt-idx="3" tabindex="0" class="page-link">Следующая</a></li></ul>
 </div>
 
                         </div>
@@ -3783,30 +3658,36 @@
                     </div>
 
                     <div class="detail-stat__content tab tab-matches">
-                        <div class="match-filter">
-                            <select class="match-filter__select form-select form-control-dark w-auto">
-                                <option value="all" selected="">Команда 1</option>
-                                <option value="playoff">Команда2</option>
-                                <option value="playoff">Команда3</option>
-                            </select>
-                            <select class="match-filter__select form-select form-control-dark w-auto">
-                                <option value="all" selected="">Все матчи</option>
-                                <option value="playoff">Плей-офф</option>
-                                <option value="regular">Регулярный чемпионат</option>
-                            </select>
-                            <select class="match-filter__select form-select form-control-dark w-auto">
-                                <option value="all" selected="">RHL </option>
-                                <option value="playoff">Кубок России</option>
-                            </select>
-                        </div>
+                        <div class="detail-stat__team-filter">
+                            <div class="match-filter">
+                                <select class="match-filter__select form-select form-control-dark w-auto">
+                                    <option value="all" selected="">Команда 1</option>
+                                    <option value="playoff">Команда2</option>
+                                    <option value="playoff">Команда3</option>
+                                </select>
+                                <select class="match-filter__select form-select form-control-dark w-auto">
+                                    <option value="all" selected="">Все матчи</option>
+                                    <option value="playoff">Плей-офф</option>
+                                    <option value="regular">Регулярный чемпионат</option>
+                                </select>
+                            </div>
 
-                        <div class="match-top">
-                            <div class="match-top__item display20 bold-text gray-text">Гости</div>
-                            <div class="match-top__item display20 bold-text gray-text">Хозяева</div>
+                            <div class="detail-stat__tabs2 tabs tabs_default" id="playerPositionFilter2">
+                                <ul class="m-tabs">
+                                    <li data-group="matches" data-id="all" class="active">Все</li>
+                                    <li data-group="matches" data-id="schedule" class="">Расписание</li>
+                                    <li data-group="matches" data-id="results" class="">Результаты</li>
+                                </ul>
+                            </div>
                         </div>
+                        <div class="m-tab tab-all" data-group="matches" style="display: block;">
+                            <div class="match-top">
+                                <div class="match-top__item display20 bold-text gray-text">Гости</div>
+                                <div class="match-top__item display20 bold-text gray-text">Хозяева</div>
+                            </div>
 
-                        <div class="match-items">
-                            <div class="match-card m-card">
+                            <div class="match-items">
+                                <div class="match-card m-card">
     <div class="played-team">
         <div class="played-team__content">
             <h3 class="played-team__title display40 yellow-text bold-text">
@@ -3907,7 +3788,7 @@
     </div>
 </div>
 
-                            <div class="match-card m-card">
+                                <div class="match-card m-card">
     <div class="played-team">
         <div class="played-team__content">
             <h3 class="played-team__title display40 yellow-text bold-text">
@@ -3999,7 +3880,7 @@
     </div>
 </div>
 
-                            <div class="match-card m-card">
+                                <div class="match-card m-card">
     <div class="played-team">
         <div class="played-team__content">
             <h3 class="played-team__title display40 yellow-text bold-text">
@@ -4091,7 +3972,7 @@
     </div>
 </div>
 
-                            <div class="match-card m-card">
+                                <div class="match-card m-card">
     <div class="played-team">
         <div class="played-team__content">
             <h3 class="played-team__title display40 yellow-text bold-text">
@@ -4183,6 +4064,328 @@
     </div>
 </div>
 
+                            </div>
+                        </div>
+                        <div class="m-tab tab-schedule" data-group="matches">
+                            <div class="match-top">
+                                <div class="match-top__item display20 bold-text gray-text">Гости</div>
+                                <div class="match-top__item display20 bold-text gray-text">Хозяева</div>
+                            </div>
+
+                            <div class="match-items">
+                                <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__captains">
+            <button class="match-result__captains-btn">
+                <img src="images/match-date.svg" alt="">
+            </button>
+            <button class="match-result__captains-btn">
+                <img src="images/Ввод статистики.svg" alt="">
+            </button>
+        </div>
+
+        <div class="match-result__top">
+            <div class="match-result__add-time display25 red-text bold-text">
+                ОТ
+            </div>
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__comp display25 bold-text">RHL</div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                <span>22:00 МСК</span>
+
+                <div class="match-result__status">
+                <img src="images/Матч подтврждён.svg" alt="">
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                        <div class="m-tab tab-results" data-group="matches">
+                            <div class="match-top">
+                                <div class="match-top__item display20 bold-text gray-text">Гости</div>
+                                <div class="match-top__item display20 bold-text gray-text">Хозяева</div>
+                            </div>
+
+                            <div class="match-items">
+                                <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__captains">
+            <button class="match-result__captains-btn">
+                <img src="images/match-date.svg" alt="">
+            </button>
+            <button class="match-result__captains-btn">
+                <img src="images/Ввод статистики.svg" alt="">
+            </button>
+        </div>
+
+        <div class="match-result__top">
+            <div class="match-result__add-time display25 red-text bold-text">
+                ОТ
+            </div>
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__comp display25 bold-text">RHL</div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                <span>22:00 МСК</span>
+
+                <div class="match-result__status">
+                <img src="images/Матч подтврждён.svg" alt="">
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                                <div class="match-card m-card">
+    <div class="played-team">
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 yellow-text bold-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="match-result split">
+        <div class="match-result__captains">
+            <button class="match-result__captains-btn">
+                <img src="images/match-date.svg" alt="">
+            </button>
+            <button class="match-result__captains-btn">
+                <img src="images/Ввод статистики.svg" alt="">
+            </button>
+        </div>
+
+        <div class="match-result__top">
+            <div class="match-result__add-time display25 red-text bold-text">
+                ОТ
+            </div>
+            <div class="match-result__score display90 bold-text">
+                8 : 2
+            </div>
+        </div>
+        <div class="match-result__comp display25 bold-text">RHL</div>
+        <div class="match-result__dates gray-text">
+            <div class="match-result__date display20 bold-text">
+                24/06/2022
+            </div>
+            <div class="match-result__date display20 bold-text">
+                <span>22:00 МСК</span>
+
+                <div class="match-result__status">
+                <img src="images/Матч подтврждён.svg" alt="">
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="played-team played-team--reverse">
+        <div class="played-team__logo-wrap">
+            <a href="" class="played-team__logo">
+                <img src="images/team.png" alt="">
+            </a>
+        </div>
+        <div class="played-team__content">
+            <h3 class="played-team__title display40 bold-text yellow-text">
+                Damage Inc
+            </h3>
+            <ul class="played-team__players">
+                <li class="played-team__player">
+                    <img src="images/avatar.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar2.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar3.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar4.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar5.jpg" alt="">
+                </li>
+                <li class="played-team__player">
+                    <img src="images/avatar6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                            </div>
                         </div>
 
                         <div class="detail-stat__nav">
