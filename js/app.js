@@ -1,5 +1,5 @@
 const TRNMNT_helpers = {
-    showPreLoader: function () {
+    showPreLoader: function() {
         $('<div id="bigPreloader"></div>').appendTo('body')
             .html(`
                 <span style="vertical-align:middle; display: table-cell;">
@@ -17,62 +17,62 @@ const TRNMNT_helpers = {
                 'display': 'table'
             });
     },
-    hidePreLoader: function () {
+    hidePreLoader: function() {
         $('#bigPreloader').remove();
     },
-    disableButtons: function (noPreloader) {
+    disableButtons: function(noPreloader) {
         $('input[type=submit], input[type=button], button').prop('disabled', true);
         this.hidePreLoader();
         if (!noPreloader) {
             this.showPreLoader();
         }
     },
-    enableButtons: function () {
+    enableButtons: function() {
         $('input[type=submit], input[type=button], button').prop('disabled', false);
         this.hidePreLoader();
     },
-    showNotification: function (message, params) {
+    showNotification: function(message, params) {
         const settings = {
             blockClass: 'alert',
             duration: 10000, //Время отображения сообщения
             animationDuration: 500, //Длительность анимации
             alertType: 'success', //Цвет сообщения
-            types: {//Варианты цветов сообщений
+            types: { //Варианты цветов сообщений
                 success: 'alert-success',
                 info: 'alert-info',
                 warning: 'alert-warning',
                 error: 'alert-danger'
             },
             position: 'se', //Позиционирование элемента
-            margin: 30//Отступ
+            margin: 30 //Отступ
         };
         const css = {
-            nw: {top: settings.margin + 'px', left: settings.margin + 'px'},
-            ne: {top: settings.margin + 'px', right: settings.margin + 'px'},
-            sw: {bottom: settings.margin + 'px', left: settings.margin + 'px'},
-            se: {bottom: settings.margin + 'px', right: settings.margin + 'px'}
+            nw: { top: settings.margin + 'px', left: settings.margin + 'px' },
+            ne: { top: settings.margin + 'px', right: settings.margin + 'px' },
+            sw: { bottom: settings.margin + 'px', left: settings.margin + 'px' },
+            se: { bottom: settings.margin + 'px', right: settings.margin + 'px' }
         };
         params = params || {};
         $.extend(true, settings, params);
         var direction = ['sw', 'se'].indexOf(settings.position) !== -1 ? 'bottom' : 'top';
 
         var $note = $('<div class="notification ' + settings.blockClass + ' ' + settings.types[settings.alertType] + '"></div>')
-            .click(function (event) {
+            .click(function(event) {
                 event.preventDefault();
                 removeNote($(this));
             })
-            .css($.extend(true, css[settings.position], {position: 'fixed', display: 'none', 'z-index': 1050}))
+            .css($.extend(true, css[settings.position], { position: 'fixed', display: 'none', 'z-index': 1050 }))
             .appendTo('body')
             .html(message)
-            .animate({opacity: 'show'}, settings.animationDuration)
+            .animate({ opacity: 'show' }, settings.animationDuration)
             .delay(settings.duration)
-            .animate({opacity: 'hide'}, settings.animationDuration)
+            .animate({ opacity: 'hide' }, settings.animationDuration)
             .delay(settings.animationDuration)
-            .queue(function () {
+            .queue(function() {
                 $(this).remove();
             });
 
-        $('.' + settings.blockClass).not($note).each(function (index, element) {
+        $('.' + settings.blockClass).not($note).each(function(index, element) {
             var block = $(element);
             var height = $note.height() + parseInt($note.css('padding')) * 2 + 10;
             block.css(direction, parseInt(block.css(direction)) + height + 'px');
@@ -84,7 +84,7 @@ const TRNMNT_helpers = {
             var noteToRemoveIndex = $notes.index($noteToRemove);
 
             $noteToRemove.hide();
-            $notes.each(function (index, element) {
+            $notes.each(function(index, element) {
                 var block = $(element);
                 if (index < noteToRemoveIndex) {
                     block.css(direction, parseInt(block.css(direction)) - height + 'px');
@@ -93,16 +93,16 @@ const TRNMNT_helpers = {
             $noteToRemove.remove();
         }
     },
-    hideNotifications: function () {
+    hideNotifications: function() {
         $('.notification').remove();
     },
-    getParameterByName: function (name) {
+    getParameterByName: function(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
             results = regex.exec(location.search);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     },
-    jsonStringify: function (s, emit_unicode) {
+    jsonStringify: function(s, emit_unicode) {
         var json = JSON.stringify(s);
         var result;
         if (emit_unicode) {
@@ -116,7 +116,7 @@ const TRNMNT_helpers = {
         }
         return result;
     },
-    parseUrl: function (url = window.location.href) {
+    parseUrl: function(url = window.location.href) {
         var a = document.createElement('a'),
             params = null,
             segments = [],
@@ -127,7 +127,7 @@ const TRNMNT_helpers = {
             params = {};
             tmp = decodeURI(tmp);
             tmp = tmp.split('&');
-            tmp.forEach(function (p) {
+            tmp.forEach(function(p) {
                 var t = p.split('=');
                 params[t[0]] = t[1];
             });
@@ -150,7 +150,7 @@ const TRNMNT_helpers = {
             segments: segments
         };
     },
-    onErrorAjax: function (e) {
+    onErrorAjax: function(e) {
         var response;
         if (e.responseText !== undefined) {
             response = JSON.parse(e.responseText);
@@ -160,14 +160,14 @@ const TRNMNT_helpers = {
                     for (let serverMessage of response.errors[error]) message += `<br>${error}: ${serverMessage}`;
                 }
             }
-            this.showNotification(message, {alertType: 'error'});
+            this.showNotification(message, { alertType: 'error' });
         } else {
-            this.showNotification('Server error.', {alertType: 'error'});
+            this.showNotification('Server error.', { alertType: 'error' });
         }
         this.enableButtons();
         this.hidePreLoader();
     },
-    updateCount: function (selector, selectorEmpty) {
+    updateCount: function(selector, selectorEmpty) {
         const countNode = $(selector);
         const count = parseInt(countNode.text()) - 1;
         const parentNode = countNode.parent();
@@ -177,17 +177,17 @@ const TRNMNT_helpers = {
             selectorEmpty && $(selectorEmpty).show();
         }
     },
-    validateEmail: function (email) {
+    validateEmail: function(email) {
         var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         return pattern.test(email);
     },
-    validateUrl: function (url) {
+    validateUrl: function(url) {
         var pattern = /^(https?:\/\/)?((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|((\d{1,3}\.){3}\d{1,3}))(\:\d+)?(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?$/;
 
         return pattern.test(url);
     },
-    getDatePickerSettings: function () {
+    getDatePickerSettings: function() {
         return {
             format: "yyyy-mm-dd",
             weekStart: 1,
@@ -196,7 +196,7 @@ const TRNMNT_helpers = {
             language: "ru"
         };
     },
-    convertTimeStringToSeconds: function (time) {
+    convertTimeStringToSeconds: function(time) {
         const tmp = time.split(':');
         let seconds = 0;
         for (let i = 0; i < tmp.length; i += 1) {
@@ -205,11 +205,11 @@ const TRNMNT_helpers = {
         }
         return seconds;
     },
-    convertSecondsToTimeString: function (seconds) {
+    convertSecondsToTimeString: function(seconds) {
         const date = new Date(seconds * 1000);
-        return (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
-            + ':'
-            + (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+        return (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) +
+            ':' +
+            (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
     },
     /**!
      * Get the contrasting color for any hex color
@@ -226,7 +226,7 @@ const TRNMNT_helpers = {
 
         // If a three-character hexcode, make six-character
         if (hex_color.length === 3) {
-            hex_color = hex_color.split('').map(function (hex) {
+            hex_color = hex_color.split('').map(function(hex) {
                 return hex + hex;
             }).join('');
         }
@@ -320,7 +320,7 @@ function dataSend(params) {
         }
     });
 
-    $(params.selector).submit(function (e) {
+    $(params.selector).submit(function(e) {
         e.preventDefault();
         TRNMNT_helpers.disableButtons();
 
@@ -376,11 +376,11 @@ function dataSend(params) {
             data: JSON.stringify(request),
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
-            success: function (response) {
+            success: function(response) {
                 TRNMNT_helpers.enableButtons();
                 params.success && params.success(response);
             },
-            error: function (response) {
+            error: function(response) {
                 TRNMNT_helpers.onErrorAjax(response);
                 for (let key in response.responseJSON.errors) {
                     const errors = response.responseJSON.errors[key];
@@ -404,7 +404,7 @@ function dataDelete(params) {
         }
     });
 
-    $(document).on('click', params.selector, function (e) {
+    $(document).on('click', params.selector, function(e) {
         e.preventDefault();
         const $button = $(this);
         const id = $button.data('id');
@@ -415,7 +415,7 @@ function dataDelete(params) {
                 type: 'delete',
                 url: url,
                 dataType: 'json',
-                success: function (response) {
+                success: function(response) {
                     TRNMNT_helpers.enableButtons();
                     params.success(response, $button);
                 },
@@ -448,8 +448,7 @@ class ImageUploader {
         this.file = null;
         this.modalElement = this.$block.find('.imageUploaderModal').get(0);
         this.modal = new bootstrap.Modal(
-            this.modalElement,
-            {
+            this.modalElement, {
                 backdrop: true,
             }
         );
@@ -623,10 +622,10 @@ $(document).ready(() => {
         event.target.value = event.target.checked ? 'on' : 'off';
     });
 
-    $(".tabs").each(function(){
+    $(".tabs").each(function() {
         let $this = $(this);
 
-        $this.find(".tabs__titles").on("click", "li", function (){
+        $this.find(".tabs__titles").on("click", "li", function() {
             let id = $(this).data("id");
 
             $this.find(".tabs__titles li").removeClass("active");
@@ -659,12 +658,12 @@ $(document).ready(() => {
         }
     });
 
-    $(document).on("click", ".navbar-toggler", function(){
+    $(document).on("click", ".navbar-toggler", function() {
         $("body").toggleClass("hidden");
     });
 });
 
-Date.prototype.getShortDate = function (delimiter = '.', inverse = false) {
+Date.prototype.getShortDate = function(delimiter = '.', inverse = false) {
     const day = _.padStart(this.getDate().toString(), 2, '0');
     const month = _.padStart((this.getMonth() + 1).toString(), 2, '0');
 
@@ -678,7 +677,7 @@ Date.prototype.getShortDate = function (delimiter = '.', inverse = false) {
  * @param {String} [delimiter]
  * @returns {String}
  */
-Date.prototype.getFullDate = function (delimiter = '.') {
+Date.prototype.getFullDate = function(delimiter = '.') {
     const day = _.padStart(this.getDate().toString(), 2, '0');
     const month = _.padStart((this.getMonth() + 1).toString(), 2, '0');
     const hour = _.padStart(this.getHours().toString(), 2, '0');
@@ -692,7 +691,7 @@ Date.prototype.getFullDate = function (delimiter = '.') {
  * Получить объект даты начала дня
  * @returns {Date}
  */
-Date.prototype.getDayBegin = function () {
+Date.prototype.getDayBegin = function() {
     return new Date(this.getFullYear(), this.getMonth(), this.getDate(), 0, 0, 0);
 };
 
@@ -701,11 +700,11 @@ Date.prototype.getDayBegin = function () {
  * @link http://habrahabr.ru/post/192124/#comment_6673074
  * @returns {string}
  */
-String.prototype.format = function () {
+String.prototype.format = function() {
     let i = -1;
     const args = arguments;
 
-    return this.replace(/#\{(.*?)\}/g, function (_, two) {
+    return this.replace(/#\{(.*?)\}/g, function(_, two) {
         return (typeof args[0] === 'object') ? args[0][two] : args[++i];
     });
 };
