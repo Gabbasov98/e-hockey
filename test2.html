@@ -1414,6 +1414,9 @@
         $(".free-dropdown__show").click(function () {
             $(".free-dropdown").toggleClass("_active")
         })
+        $(".free-dropdown__item").click(function () {
+            $(this).toggleClass("_active")
+        })
 
         $(document).mouseup(function(e) {
             var div = $('.free-dropdown');
